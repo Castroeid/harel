@@ -23,7 +23,7 @@
 
     body {
       margin: 0;
-      height: 100vh;
+      min-height: 100vh;
       font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
@@ -40,6 +40,7 @@
       overflow: hidden;
       border-radius: 20px;
       box-shadow: 0 20px 60px rgba(0,0,0,.5);
+      background: #0b223a;
     }
 
     .bg {
@@ -53,7 +54,8 @@
     .overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0) 50%);
+      background: linear-gradient(to top, rgba(0,0,0,.58), rgba(0,0,0,0) 48%);
+      pointer-events: none;
     }
 
     .btn {
@@ -73,15 +75,18 @@
       text-decoration: none;
       border: 2px solid #c7a45a;
       box-shadow: 0 8px 16px rgba(0,0,0,.4);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      z-index: 5;
     }
 
     .waze-btn {
-      bottom: 95px;
+      bottom: calc(135px + env(safe-area-inset-bottom));
       background: linear-gradient(135deg, #0a3d68, #08223d);
     }
 
     .wa-btn {
-      bottom: 30px;
+      bottom: calc(70px + env(safe-area-inset-bottom));
       background: linear-gradient(135deg, #25D366, #128C7E);
     }
 
@@ -92,40 +97,49 @@
       background: white;
       padding: 3px;
       object-fit: contain;
+      flex: 0 0 auto;
+    }
+
+    .icon-fallback {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      background: white;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      color: #08223d;
+      font-size: 1rem;
+      flex: 0 0 auto;
     }
   </style>
 </head>
 
 <body>
-
   <div class="container">
     <img class="bg"
-         src="assets/invite-mobile.webp"
-         alt="הזמנה"
-         loading="eager" />
+         src="assets/invite-full.webp"
+         alt="הזמנה לעלייה לתורה של הראל שקד"
+         loading="eager"
+         fetchpriority="high" />
 
     <div class="overlay"></div>
 
-    <!-- Waze -->
     <a class="btn waze-btn"
-       href="https://www.waze.com/ul?ll=32.47374,35.04678&navigate=yes"
-       onclick="window.location.href='waze://?ll=32.47374,35.04678&navigate=yes'"
+       href="https://waze.com/ul/hsvbbtq7xh"
        target="_blank"
        rel="noopener noreferrer">
       <span>להגעה לחצו כאן</span>
-      <img src="assets/waze-icon.webp" class="icon-img" alt="Waze" />
+      <img src="assets/waze-icon.png" class="icon-img" alt="Waze" />
     </a>
 
-    <!-- WhatsApp RSVP -->
     <a class="btn wa-btn"
-       href="https://wa.me/972526211036?text=%D7%A0%D7%A9%D7%9E%D7%97%20%D7%9C%D7%94%D7%92%D7%99%D7%A2%20-%20%D7%90%D7%A0%D7%97%D7%A0%D7%95%20___%20%D7%90%D7%A0%D7%A9%D7%99%D7%9D"
+       href="https://wa.me/972526211036?text=%D7%A0%D7%92%D7%99%D7%A2%20%D7%9C%D7%A2%D7%9C%D7%99%D7%99%D7%94%20%D7%9C%D7%AA%D7%95%D7%A8%D7%94%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%90%D7%9C%20%D7%91-18%2F05%20%D7%90%D7%A0%D7%97%D7%A0%D7%95%20%D7%A0%D7%94%D7%99%D7%94%20___%20%D7%90%D7%A0%D7%A9%D7%99%D7%9D"
        target="_blank"
        rel="noopener noreferrer">
       <span>אישור הגעה</span>
-      <span>💬</span>
+      <span class="icon-fallback">💬</span>
     </a>
-
   </div>
-
 </body>
 </html>
