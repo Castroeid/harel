@@ -11,18 +11,11 @@
   <meta property="og:description" content="יום שני | 18/05 | בית הכנסת לב חריש" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://castroeid.github.io/harel/" />
-
   <meta property="og:image" content="https://castroeid.github.io/harel/assets/invite-full.webp" />
-  <meta property="og:image:secure_url" content="https://castroeid.github.io/harel/assets/invite-full.webp" />
-  <meta property="og:image:type" content="image/webp" />
-  <meta property="og:image:width" content="1080" />
-  <meta property="og:image:height" content="1920" />
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://castroeid.github.io/harel/assets/invite-full.webp" />
 
-  <!-- ביצועים -->
   <link rel="preload" as="image" href="assets/invite-full.webp" />
 
   <style>
@@ -60,48 +53,45 @@
     .overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0) 45%);
+      background: linear-gradient(to top, rgba(0,0,0,.6), rgba(0,0,0,0) 50%);
     }
 
     .btn {
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      width: 85%;
-      height: 56px;
+      width: 75%;
+      height: 46px;
       border-radius: 999px;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      font-size: 1.1rem;
+      gap: 8px;
+      font-size: 0.95rem;
       font-weight: bold;
       text-decoration: none;
       border: 2px solid #c7a45a;
-      box-shadow: 0 10px 20px rgba(0,0,0,.4);
+      box-shadow: 0 8px 16px rgba(0,0,0,.4);
     }
 
     .waze-btn {
-      bottom: 110px;
+      bottom: 95px;
       background: linear-gradient(135deg, #0a3d68, #08223d);
     }
 
     .wa-btn {
-      bottom: 40px;
+      bottom: 30px;
       background: linear-gradient(135deg, #25D366, #128C7E);
     }
 
-    .icon {
-      width: 32px;
-      height: 32px;
+    .icon-img {
+      width: 26px;
+      height: 26px;
       border-radius: 50%;
       background: white;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #08223d;
-      font-size: 1.2rem;
+      padding: 3px;
+      object-fit: contain;
     }
   </style>
 </head>
@@ -116,22 +106,27 @@
 
     <div class="overlay"></div>
 
-    <!-- ניווט Waze -->
+    <!-- Waze -->
     <a class="btn waze-btn"
-       href="https://waze.com/ul?ll=32.47363,35.04670&navigate=yes"
+       href="https://www.waze.com/ul?ll=32.47374,35.04678&navigate=yes"
+       onclick="window.location.href='waze://?ll=32.47374,35.04678&navigate=yes'"
        target="_blank"
        rel="noopener noreferrer">
+
       <span>להגעה לחצו כאן</span>
-      <span class="icon">🚗</span>
+      <img src="assets/waze-icon.png" class="icon-img" alt="Waze" />
+
     </a>
 
-    <!-- וואטסאפ אישור הגעה -->
+    <!-- WhatsApp -->
     <a class="btn wa-btn"
        href="https://wa.me/972526211036?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%90%D7%A9%D7%A8%20%D7%94%D7%92%D7%A2%D7%94%20%D7%9C%D7%A2%D7%9C%D7%99%D7%99%D7%94%20%D7%9C%D7%AA%D7%95%D7%A8%D7%94%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%90%D7%9C%20%D7%A9%D7%A7%D7%93%2018.05"
        target="_blank"
        rel="noopener noreferrer">
-      <span>אישור הגעה בוואטסאפ</span>
-      <span class="icon">💬</span>
+
+      <span>אישור הגעה</span>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" class="icon-img" alt="WhatsApp" />
+
     </a>
 
   </div>
