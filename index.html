@@ -11,11 +11,18 @@
   <meta property="og:description" content="יום שני | 18/05 | בית הכנסת לב חריש" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://castroeid.github.io/harel/" />
-  <meta property="og:image" content="https://castroeid.github.io/harel/assets/invite-full.webp" />
 
+  <meta property="og:image" content="https://castroeid.github.io/harel/assets/invite-full.webp" />
+  <meta property="og:image:secure_url" content="https://castroeid.github.io/harel/assets/invite-full.webp" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:width" content="1080" />
+  <meta property="og:image:height" content="1920" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://castroeid.github.io/harel/assets/invite-full.webp" />
 
+  <!-- ביצועים -->
   <link rel="preload" as="image" href="assets/invite-full.webp" />
 
   <style>
@@ -102,22 +109,27 @@
 <body>
 
   <div class="container">
-    <img class="bg" src="assets/invite-full.webp" alt="הזמנה" />
+    <img class="bg"
+         src="assets/invite-full.webp"
+         alt="הזמנה"
+         loading="eager" />
 
     <div class="overlay"></div>
 
     <!-- ניווט Waze -->
     <a class="btn waze-btn"
        href="https://waze.com/ul?ll=32.47363,35.04670&navigate=yes"
-       target="_blank">
+       target="_blank"
+       rel="noopener noreferrer">
       <span>להגעה לחצו כאן</span>
       <span class="icon">🚗</span>
     </a>
 
     <!-- וואטסאפ אישור הגעה -->
     <a class="btn wa-btn"
-       href="https://wa.me/972526211036?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%90%D7%A9%D7%A8%20%D7%94%D7%92%D7%A2%D7%94%20%D7%9C%D7%A2%D7%9C%D7%99%D7%99%D7%94%20%D7%9C%D7%AA%D7%95%D7%A8%D7%94%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%90%D7%9C"
-       target="_blank">
+       href="https://wa.me/972526211036?text=%D7%94%D7%99%D7%99%20%D7%9E%D7%90%D7%A9%D7%A8%20%D7%94%D7%92%D7%A2%D7%94%20%D7%9C%D7%A2%D7%9C%D7%99%D7%99%D7%94%20%D7%9C%D7%AA%D7%95%D7%A8%D7%94%20%D7%A9%D7%9C%20%D7%94%D7%A8%D7%90%D7%9C%20%D7%A9%D7%A7%D7%93%2018.05"
+       target="_blank"
+       rel="noopener noreferrer">
       <span>אישור הגעה בוואטסאפ</span>
       <span class="icon">💬</span>
     </a>
